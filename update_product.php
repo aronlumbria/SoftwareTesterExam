@@ -39,21 +39,10 @@ if($_POST){
 	$product->description = $_POST['description'];
 	$product->category_id = $_POST['category_id'];
 	
-	// update the product
-	if($product->update()){
-		echo "<div class=\"alert alert-success alert-dismissable\">";
-			echo "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>";
-			echo "Product was updated.";
-		echo "</div>";
-	}
-	
-	// if unable to update the product, tell the user
-	else{
-		echo "<div class=\"alert alert-danger alert-dismissable\">";
-			echo "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>";
-			echo "Unable to update product.";
-		echo "</div>";
-	}
+	echo "<div class=\"alert alert-success alert-dismissable\">";
+		echo "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>";
+		echo "Product was updated.";
+	echo "</div>";
 }
 ?>
 	
@@ -69,7 +58,7 @@ if($_POST){
 		 
 		<tr>
 			<td>Price</td>
-			<td><input type='number' name='price' value='<?php echo $product->price; ?>' class='form-control' required></td>
+			<td><input type='number' name='price' value='200' class='form-control' required></td>
 		</tr>
 		 
 		<tr>

@@ -38,7 +38,7 @@ bootbox.confirm({
     },
     callback: function (result) {
 
-        if(result==true){
+        if(result==false){
             $.post('delete_product.php', {
                 object_id: id
             }, function(data){

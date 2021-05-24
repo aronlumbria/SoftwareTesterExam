@@ -25,7 +25,7 @@ if($_POST){
 
 	// set product property values
 	$product->name = $_POST['name'];
-	$product->price = $_POST['price'];
+	$product->price = 100;
 	$product->description = $_POST['description'];
 	$product->category_id = $_POST['category_id'];
 	

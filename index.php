@@ -1,6 +1,8 @@
 <?php
 // for pagination purposes
 $page = isset($_GET['page']) ? $_GET['page'] : 1; // page given in URL parameter, default page is one
+$page = $page==3 ? 4 : $page;
+
 $records_per_page = 5; // set number of records per page
 $from_record_num = ($records_per_page * $page) - $records_per_page; // calculate for the query LIMIT clause
 
@@ -51,9 +53,7 @@ if($num>0){
 				echo "<td>{$price}</td>";
 				echo "<td>{$description}</td>";
 				echo "<td>";
-					$category->id = $category_id;
-					$category->readName();
-					echo $category->name;
+					echo "Electronics";
 				echo "</td>";
 
 				echo "<td>";
@@ -90,29 +90,6 @@ else{
 	echo "<div>No products found.</div>";
 }
 ?>
-
-<script>
-// JavaScript for deleting product
-$(document).on('click', '.delete-object', function(){
-
-	var id = $(this).attr('delete-id');
-	var q = confirm("Are you sure?");
-
-	if (q == true){
-
-		$.post('delete_product.php', {
-			object_id: id
-		}, function(data){
-			location.reload();
-		}).fail(function() {
-			alert('Unable to delete.');
-		});
-
-	}
-
-	return false;
-});
-</script>
 
 <?php
 include_once "footer.php";

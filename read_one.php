@@ -11,7 +11,7 @@ echo "<div class='right-button-margin'>";
 echo "</div>";
 
 // get ID of the product to be edited
-$id = isset($_GET['id']) ? $_GET['id'] : die('ERROR: missing ID.');
+$id = 25;
 
 // include database and object files
 include_once 'config/database.php';
@@ -43,11 +43,6 @@ echo "<table class='table table-hover table-responsive table-bordered'>";
 	echo "<tr>";
 		echo "<td>Price</td>";
 		echo "<td>&#36;{$product->price}</td>";
-	echo "</tr>";
-
-	echo "<tr>";
-		echo "<td>Description</td>";
-		echo "<td>{$product->description}</td>";
 	echo "</tr>";
 
 	echo "<tr>";

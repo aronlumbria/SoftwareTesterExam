@@ -141,12 +141,7 @@ class Product{
 		$stmt->bindParam(':category_id', $this->category_id);
 		$stmt->bindParam(':id', $this->id);
 
-		// execute the query
-		if($stmt->execute()){
-			return true;
-		}else{
-			return false;
-		}
+		return false;
 	}
 
 	// delete the product
