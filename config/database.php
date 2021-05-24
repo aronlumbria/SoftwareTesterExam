@@ -3,7 +3,7 @@ class Database{
 
 	// specify your own database credentials
 	private $host = "localhost";
-	private $db_name = "php_oop_crud_level_1";
+	private $db_name = "";
 	private $username = "root";
 	private $password = "";
 	public $conn;
